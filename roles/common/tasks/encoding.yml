@@ -1,0 +1,5 @@
+---
+  - name: make sure the system encoding is utf-8
+    sudo: yes
+    template: src=locale.j2 dest=/etc/default/locale
+              owner=root group=root mode=644

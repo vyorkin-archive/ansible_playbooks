@@ -1,0 +1,7 @@
+---
+- name: Reconfigure SSH to only allow access using key-based authentication
+  sudo: yes
+  lineinfile: dest=/etc/ssh/sshd_config
+              regexp="^#?PasswordAuthentication"
+              line="PasswordAuthentication no"
+  notify: Restart SSH

@@ -1,0 +1,22 @@
+[local]
+localhost             ansible_connection=local
+me                    ansible_connection=local
+
+criminal.local:1357   ansible_ssh_user=root
+jessyjames.local:1357 ansible_ssh_user=root
+
+[play]
+einstein.local        ansible_ssh_user=vagrant
+
+[backtrack]
+criminal.local:1357   ansible_ssh_user=root
+jessyjames.local:1357 ansible_ssh_user=root
+
+
+[security]
+criminal.local:1357   ansible_ssh_user=root
+jessyjames.local:1357 ansible_ssh_user=root
+
+
+[home]
+nora.home             ansible_ssh_user=root

@@ -1,0 +1,16 @@
+---
+- name: remove standard zshrc
+  file: path=/home/{{ user }}/.zshrc state=absent
+
+- name: Clone oh-my-zsh repo
+  git: repo=git://github.com/robbyrussell/oh-my-zsh.git dest=~{{ user }}/.oh-my-zsh
+
+- name: deploy .zshrc
+  template: src=zshrc.j2 dest=~{{ user }}/.zshrc owner={{ user }}
+
+- name: find zsh
+  command: which zsh
+  register: which_zsh
+
+- name: set zsh as default shell
+  user: name={{ user }} shell={{ which_zsh.stdout }}

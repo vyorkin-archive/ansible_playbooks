@@ -1,0 +1,4 @@
+---
+dependencies:
+  - joshualund.ruby-common
+  - joshualund.ruby-2_1

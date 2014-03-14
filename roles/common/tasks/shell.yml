@@ -1,0 +1,8 @@
+---
+- name: copy up .bashrc
+  copy: dest=~/.bashrc
+        src=bashrc
+- name: copy up .bash_profile
+  copy: dest=~/.bash_profile
+        src=bash_profile
+

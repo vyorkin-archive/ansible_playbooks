@@ -1,0 +1,4 @@
+user: vagrant
+
+oh_my_zsh:
+  theme: gentoo
