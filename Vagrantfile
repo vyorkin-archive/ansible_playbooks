@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     :nfs => { :mount_options => ['dmode = 777', 'fmode = 777'] }
 
   config.vm.provision :ansible do |ansible|
-    ansible.playbook = 'kickass.yml'
+    ansible.playbook = 'provisioning/kickass.yml'
     ansible.verbose = 'vv'
   end
 end
