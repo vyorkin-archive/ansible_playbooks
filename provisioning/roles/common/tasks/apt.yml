@@ -16,9 +16,6 @@
     - python-software-properties
     - nodejs
     - curl
-    - postgresql
-    - postgresql-client
-    - postgresql-contrib
     - nfs-common
     - libssl-dev
     - libxml2-dev

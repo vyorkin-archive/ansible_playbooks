@@ -1,9 +1,0 @@
----
-- hosts: all
-  remote_user: vagrant
-  sudo: yes
-  roles:
-    - common
-    - oh-my-zsh
-    - ruby-build
-    - zzet.postgresql

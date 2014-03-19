@@ -1,0 +1,17 @@
+---
+- name: 'LNPR - linux, nginx, postgresql, ruby'
+  sudo: yes
+  vars_files:
+    - 'secrets/common.yml'
+  hosts: all
+  remote_user: vagrant
+  vars:
+    user: vagrant
+    oh_my_zsh:
+      theme: gentoo
+  roles:
+    - common
+    - oh-my-zsh
+    - ruby-build
+    - postgresql
+

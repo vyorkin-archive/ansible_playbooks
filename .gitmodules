@@ -1,0 +1,6 @@
+[submodule "provisioning/secrets"]
+	path = provisioning/secrets
+	url = git@bitbucket.org:vyorkin/ansible_secrets.git
+[submodule "provisioning/roles/postgresql"]
+	path = provisioning/roles/postgresql
+	url = https://github.com/zenoamaro/ansible-postgresql.git

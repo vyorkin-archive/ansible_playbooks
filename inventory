@@ -1,0 +1,5 @@
+[vagrant]
+einstein.local
+
+[vagrant:vars]
+ansible_ssh_user = vagrant

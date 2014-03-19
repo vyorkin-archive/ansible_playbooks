@@ -1,0 +1,19 @@
+---
+- name: 'LNPR - linux, nginx, postgresql, ruby'
+  sudo: yes
+  vars_files:
+    - 'secrets/common.yml'
+  vars_prompt:
+    selected_hosts: Specify the host groups to provision
+    selected_user: Specify user
+  hosts: "{{ selected_hosts }}"
+  remote_user: "{{ selected_user }}"
+  vars:
+    user: "{{ selected_user }}"
+    oh_my_zsh:
+      theme: gentoo
+  roles:
+    - common
+    - oh-my-zsh
+    - ruby-build
+    - postgresql
